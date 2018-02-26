@@ -1,4 +1,3 @@
-set number
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -37,3 +36,16 @@ syntax enable
 "endif
 
 "End dein Scripts-------------------------
+set number
+set title
+set ambiwidth=double
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set smartindent
+set list
+set nrformats-=octal
+set hidden
+set history=50
+set virtualedit=block
+set backspace=indent,eol,start
