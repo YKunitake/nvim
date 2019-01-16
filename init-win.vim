@@ -44,20 +44,20 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-"s”Ô†‚ğ•\¦
+" è‰²ä»˜ã‘
 colorscheme evening
 syntax on
-"è¡Œç•ªå·ã®è¡¨ç¤º
+" è¡Œç•ªå·ã‚’è¡¨ç¤º
 set number
 set title
 set ambiwidth=double
-"ƒCƒ“ƒfƒ“ƒg‚ğ©“®‚Å‡‚í‚¹‚Ä‚­‚ê‚é
+" ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã‚’è‡ªå‹•ã§åˆã‚ã›ã¦ãã‚Œã‚‹
 set autoindent
-"ƒ^ƒu‚ğƒXƒy[ƒX4‚Â•ª‚Ì‘å‚«‚³‚É‚·‚é
+" ã‚¿ãƒ–ã‚’ã‚¹ãƒšãƒ¼ã‚¹4ã¤åˆ†ã®å¤§ãã•ã«ã™ã‚‹
 set expandtab
 set tabstop=4
 set shiftwidth=4
-" ~.swpƒtƒ@ƒCƒ‹‚ğì‚ç‚È‚¢
+" ~.swpãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œã‚‰ãªã„
 set noswapfile
 set hidden
 set backspace=indent,eol,start
@@ -65,5 +65,5 @@ set virtualedit=block
 set t_Co=256
 set termguicolors
 set background=dark
-" ƒŒƒWƒXƒ^‚Å‚Í‚È‚­ƒNƒŠƒbƒvƒ{[ƒh‚ğg—p
+" ãƒ¬ã‚¸ã‚¹ã‚¿ã§ã¯ãªãã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã‚’ä½¿ç”¨
 "set clipboard=unnamed,autoselect
