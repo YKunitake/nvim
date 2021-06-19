@@ -13,14 +13,7 @@ if dein#load_state('~/.config/nvim')
 
   " Let dein manage dein
   " Required:
-  call dein#add('~/.config/nvim/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  call dein#load_toml('~/.config/nvim/dein.toml')
 
   " Required:
   call dein#end()
@@ -32,7 +25,8 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-if dein#check_install()
+"if dein#check_install()
+if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
