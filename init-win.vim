@@ -5,29 +5,22 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=C:/Users/em56032/AppData/Local/nvim/repos/github.com/Shougo/dein.vim
+set runtimepath+=C:/Users/YKunitake/AppData/Local/nvim/repos/github.com/Shougo/dein.vim
 
-"let s:dein_home_dir = expand('C:/Users/em56032/AppData/Local/nvim')
-let s:dein_repo_dir = expand('C:/Users/em56032/AppData/Local/nvim/repos/github.com/Shougo/dein.vim')
-"let s:toml_file = expand('C:/Users/em56032/AppData/Local/nvim/dein.tom')
+let s:dein_home_dir = expand('C:/Users/YKunitake/AppData/Local/nvim')
+let s:dein_repo_dir = expand('C:/Users/YKunitake/AppData/Local/nvim/repos/github.com/Shougo/dein.vim')
+let s:toml_file = expand('C:/Users/YKunitake/AppData/Local/nvim/dein.toml')
 
 if !isdirectory(s:dein_repo_dir)
   execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
 
-if dein#load_state(s:dein_repo_dir)
-  call dein#begin(s:dein_repo_dir)
+if dein#load_state(s:dein_repo_home)
+  call dein#begin(s:dein_repo_home)
 
- " Let dein manage dein
- " Required:
-  call dein#add(s:dein_repo_dir)
-
- " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-
- " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', {'rev': '3787e5'})
+  " Let dein manage dein
+  " Required:
+  call dein#load_toml(s:toml_file)
 
  " Required:
   call dein#end()
