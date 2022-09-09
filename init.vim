@@ -31,6 +31,25 @@ if has('vim_starting') && dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+"dcc config
+call ddc#custom#patch_global('sources', ['around'])
+call ddc#custom#patch_global('sourceOptions', {
+            \ '_': {
+                \ 'matchers': ['matcher_head'],
+                \ },
+            \ })
+call ddc#custom#patch_global('sourceOptions', {
+            \ 'around': {'mark': 'A'},
+            \ })
+call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', ['around', 'clangd'])
+call ddc#custom#patch_filetype(['c', 'cpp'], 'sourceOptions', {
+            \ 'clangd': {'mark': 'C'},
+            \ })
+call ddc#custom#patch_filetype('markdown', 'sourceParams', {
+            \ 'around': {'maxSize': 100},
+            \ })
+call ddc#enable()
+"
 " 色付け
 colorscheme evening
 syntax on

@@ -11,6 +11,21 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
 #[[plugins]] # カラースキーマ
 #repo = 'w0ng/vim-hybrid'
 #hook_add = '''
