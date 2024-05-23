@@ -32,31 +32,23 @@ endif
 
 "End dein Scripts-------------------------
 "dcc config
+call ddc#custom#patch_global('ui', 'pum')
 call ddc#custom#patch_global('sources', ['around'])
 call ddc#custom#patch_global('sourceOptions', {
             \ '_': {
                 \ 'matchers': ['matcher_head'],
+                \ 'sorters': ['sorter_rank'],
+                \ 'converters': ['converter_remove_overlap'],
                 \ },
-            \ })
-call ddc#custom#patch_global('sourceOptions', {
             \ 'around': {'mark': 'A'},
             \ })
-call ddc#custom#patch_global('sourceParams', {
-            \ 'around': {'maxSize': 500},
-            \ })
-"call ddc#custom#patch_filetype(['c', 'cpp'], 'sources', ['around', 'clangd'])
-"call ddc#custom#patch_filetype(['c', 'cpp'], 'sourceOptions', {
-"            \ 'clangd': {'mark': 'C'},
-"            \ })
-call ddc#custom#patch_filetype('markdown', 'sourceParams', {
-            \ 'around': {'maxSize': 100},
-            \ })
-inoremap <silent><expr> <TAB>
-            \ ddc#map#pum_visible() ? '<C-n>' :
-            \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
-            \ '<TAB>' : ddc#map#manual_complete()
-inoremap <expr><S-TAB> ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
 call ddc#enable()
+inoremap <Tab>   <Cmd>call pum#map#insert_relative(+1)<CR>
+inoremap <S-Tab> <Cmd>call pum#map#insert_relative(-1)<CR>
+inoremap <C-n>   <Cmd>call pum#map#insert_relative(+1)<CR>
+inoremap <C-p>   <Cmd>call pum#map#insert_relative(-1)<CR>
+inoremap <C-y>   <Cmd>call pum#map#confirm()<CR>
+inoremap <C-e>   <Cmd>call pum#map#cancel()<CR>
 
 " 色付け
 colorscheme evening
