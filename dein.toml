@@ -38,6 +38,12 @@ repo = 'Shougo/neosnippet.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+[[plugins]]
+repo = 'nvim-tree/nvim-web-devicons'
+
+[[plugins]]
+repo = 'nvim-tree/nvim-tree.lua'
+
 #[[plugins]] # カラースキーマ
 #repo = 'w0ng/vim-hybrid'
 #hook_add = '''
