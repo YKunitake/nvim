@@ -1,8 +1,10 @@
 require("config.lazy")
 require("config.nvim_treesitter")
 require("config.lsp")
+require("config.keymap")
 
-vim.g.python3_host_prog = '/usr/bin/python3'
+--vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.python3_host_prog = '/home/yukihito/venv/bin/python3'
 
 --color
 vim.cmd('colorscheme evening')
