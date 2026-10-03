@@ -17,9 +17,18 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Debian/Ubuntu install bundled parsers under lib/<triplet>/nvim, which lazy's rtp reset drops
+local nvim_prefix = vim.fn.fnamemodify(vim.v.progpath, ":p:h:h")
+local bundled_lib_paths = vim.fn.glob(nvim_prefix .. "/lib/*/nvim", false, true)
+
 require("lazy").setup({
     spec = {
         { import = "plugins" },
     },
     checker = {enabled = true},
+    performance = {
+        rtp = {
+            paths = bundled_lib_paths,
+        },
+    },
 })

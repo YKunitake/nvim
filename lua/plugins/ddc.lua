@@ -26,15 +26,6 @@ return {
                 mark = '[A]',
             },
         })
-        vim.fn["ddc#custom#patch_global"]{"sourceParams",{
-            lsp = {
-                snippetEngine = vim.fn["denops#callback#register"](function(body)
-                    vim.fn["vsnip#anonymous"](body)
-                end),
-                enableResolveItem = true,
-                enableAdditionalTextEdit = true,
-            }
-        }}
         vim.fn["ddc#enable"]()
     end,
 }
